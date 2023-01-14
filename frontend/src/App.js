@@ -7,6 +7,7 @@ import Login from './Pages/Signin/SignIn'
 import SignUp from './Pages/Signup/SignUp'
 import Dashboard from './Pages/DashBoard/Dashboard'
 import Profile from './Pages/Profile/Profile'
+import Bookings from './Pages/Bookings/Bookings'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/signin" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path='/dash' element={<Dashboard />} />
+              <Route path='/bookings' element={<Bookings />} />
               <Route path='/profile' element={<Profile />} />
             </Routes>
           
