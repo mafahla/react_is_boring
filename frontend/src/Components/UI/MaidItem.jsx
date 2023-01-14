@@ -16,7 +16,7 @@ const CarItem = (props) => {
       </div>
 
       <div className="car__img">
-        <img src={imgUrl} alt="" />
+        <img src="https://www.clipartmax.com/png/middle/48-488541_cleaning-maids.png" alt="" />
       </div>
 
       <div className="car__item-bottom">

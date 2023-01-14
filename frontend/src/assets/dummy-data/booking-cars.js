@@ -1,4 +1,4 @@
-import car01 from "../images/car-01.png";
+import car01 from "../images/maid.png";
 // import car02 from "../images/car-02.png";
 // import car03 from "../images/car-03.png";
 // import car04 from "../images/car-04.png";
