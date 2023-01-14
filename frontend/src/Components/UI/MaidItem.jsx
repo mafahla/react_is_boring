@@ -1,4 +1,5 @@
 import React from "react";
+import './UI.css'
 
 const CarItem = (props) => {
   const { category, type, rentPrice, imgUrl, carName, groupSize } = props.item;
@@ -21,15 +22,15 @@ const CarItem = (props) => {
       <div className="car__item-bottom">
         <div className="car__bottom-left">
           <p>
-            <i class="ri-user-line"></i> {groupSize}
+            <i class="ri-star-fill t"></i> {groupSize}
           </p>
           <p>
-            <i class="ri-repeat-line"></i>
+            <i class="ri-customer-service-fill"></i>
             {type}
           </p>
         </div>
 
-        <p className="car__rent">${rentPrice}/d</p>
+     
       </div>
     </div>
   );

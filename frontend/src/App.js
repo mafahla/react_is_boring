@@ -8,6 +8,8 @@ import SignUp from './Pages/Signup/SignUp'
 import Dashboard from './Pages/DashBoard/Dashboard'
 import Profile from './Pages/Profile/Profile'
 import Bookings from './Pages/Bookings/Bookings'
+import Sidebar from "./Components/SideBar/Sidebar";
+import TopNav from "./Components/TopNav/TopNav";
 
 function App() {
   return (
@@ -18,9 +20,13 @@ function App() {
               <Route exact path="/" element={<Login />} />
               <Route path="/signin" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
-              <Route path='/dash' element={<Dashboard />} />
-              <Route path='/bookings' element={<Bookings />} />
-              <Route path='/profile' element={<Profile />} />
+             
+              
+                <Route path='/dash' element={<Dashboard />} />
+                <Route path='/bookings' element={<Bookings />} />
+                <Route path='/profile' element={<Profile />} />
+                  
+             
             </Routes>
           
         
