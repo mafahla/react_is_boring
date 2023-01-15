@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './signup.css';
 import axios from "axios";
 import { useState } from "react";
+import Validation from "../../Components/validation/Validation";
 // import { useHistory } from "react-router";
 
 export default function SignUp(props) {
@@ -11,8 +12,11 @@ export default function SignUp(props) {
     //   const history = useHistory()
       const { setActiveUser, setLoggedIn } = props;
 
+      const [errors, setErrors] = useState({});
+
       const handleSubmit = async (e) => {
         e.preventDefault();
+        setErrors(Validation(first_name,email,password))
         const reqBody = {
         data:{
           first_name,
@@ -43,6 +47,7 @@ export default function SignUp(props) {
                 <input type="text" className="form-control" placeholder="First name"
                 onChange={(e) => setName(e.target.value)}
                 name="first_name" />
+                {errors.first_name && <p className="error">{errors.first_name}</p>}
             </div>
 
             <div className="form-group mt-3">
@@ -50,6 +55,7 @@ export default function SignUp(props) {
                 <input type="email" className="form-control" placeholder="Enter email" 
                 onChange={(e) => setEmail(e.target.value)}
                 name="Email"/>
+                {errors.email && <p className="error">{errors.email}</p>}
             </div>
 
             <div className="form-group mt-3 mb-3">
@@ -57,9 +63,10 @@ export default function SignUp(props) {
                 <input type="password" className="form-control" placeholder="Enter password" 
                 onChange={(e) => setPassword(e.target.value)}
                 name="Password"/>
+                {errors.password && <p className="error">{errors.password}</p>}
             </div>
 
-            <button type="submit" className="btn "><a >Register </a></button>
+            <button type="submit" className="btn "><a href="/dash">Register </a></button>
             <p className="forgot-password text-center">
                 Already registered <a href="/signin">Log in?</a>
             </p>

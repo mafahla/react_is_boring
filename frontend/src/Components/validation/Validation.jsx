@@ -1,5 +1,5 @@
 
-const Validation =(values) {
+const Validation =(values) => {
     let errors = {};
 
     if (!values.first_name){

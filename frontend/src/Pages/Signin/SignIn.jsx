@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import './signin.css';
 import Loader from '../../Components/loader/Loader';
+import Validation from '../../Components/validation/Validation'
 
 
 
@@ -14,8 +15,11 @@ export default function SignIn(props) {
       const [errorMessage, setErrorMessage] = useState("");
       // const history = useHistory();
       const { setActiveUser, setLoggedIn } = props;
+      const [errors, setErrors] = useState({});
+
       const handleSubmit = async (e) => {
         e.preventDefault();
+        setErrors(Validation(email, password))
         const res = await axios.get(
           `http://localhost:1337/api/users-details?email=${email}&password=${password}`
         );
@@ -37,12 +41,22 @@ export default function SignIn(props) {
 
     <div className="form-group mt-3">
         <label>Email</label>
-        <input type="email" className="form-control" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)}/>
+        <input type="email" 
+        className="form-control" 
+        placeholder="Enter email" 
+        onChange={(e) => setEmail(e.target.value)}
+        name="Email"/>
+        {errors.email && <p className="error">{errors.email}</p>}
     </div>
 
     <div className="form-group mt-3">
         <label>Password</label>
-        <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} />
+        <input type="password" 
+        className="form-control" 
+        placeholder="Enter password" 
+        onChange={(e) => setPassword(e.target.value)}
+        name="Password" />
+        {errors.password && <p className="error">{errors.password}</p>}
     </div>
 
     <p className="forgot-password text-right">
@@ -50,7 +64,7 @@ export default function SignIn(props) {
     </p>
 
     <button  type="submit" className="btn ">
-    <a href='/dash'> Login </a>
+    <a href="/dash"> Login </a>
     </button>
     <div className="mt-3">
      <p className="mb-0  text-center">
