@@ -5,6 +5,10 @@ import navLinks from "../../assets/dummy-data/navLinks";
 import "./sidebar.css";
 
 const Sidebar = () => {
+//   logout() {
+//     localStorage.clear();
+//     window.location.href = '/';
+// }
   return (
     <div className="sidebar">
       <div className="sidebar__top">
