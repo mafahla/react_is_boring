@@ -1,8 +1,11 @@
 import React from 'react'
+import { useState, useEffect } from "react";
 import Sidebar from '../../Components/SideBar/Sidebar'
 import TopNav from "../../Components/TopNav/TopNav";
 import './dashboard.css'
 import SingleCard from "../../Components/Reuseable/SingleCard"
+import Loader from '../../Components/loader/Loader';
+
 
 const carObj = {
   title: "Total Maids",
@@ -29,22 +32,27 @@ const clientObj = {
 //   };
 
 function Dashboard() {
+
+
   return (
     <div>
+      
       <Sidebar />
       <div className="main__layout">
         <TopNav />
 
         <div className="content">
+        
           <div className="dashboard">
             <div className="dashboard__wrapper">
               <div className="dashboard__cards">
                 <SingleCard item={carObj} />
                 <SingleCard item={tripObj} />
                 <SingleCard item={clientObj} />
+                
 
               </div>
-
+              <Loader />
 
 
 

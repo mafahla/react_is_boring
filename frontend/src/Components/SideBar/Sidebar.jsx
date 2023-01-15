@@ -10,7 +10,7 @@ const Sidebar = () => {
       <div className="sidebar__top">
         <h2>
           <span>
-            <i class="ri-vip-crown-fill"></i>
+            <i className="ri-vip-crown-fill"></i>
           </span>{" "}
           Our Maids
         </h2>
@@ -39,7 +39,7 @@ const Sidebar = () => {
         <div className="sidebar__bottom">
           <span>
           <a href="/signin">
-            <i class="ri-logout-circle-r-line"></i> Logout
+            <i className="ri-logout-circle-r-line"></i> Logout
           </a>
             </span>
         </div>
