@@ -14,11 +14,11 @@
   }
   
   .single__card:nth-child(1) {
-    background: var(--card-01-bg);
+    background: var(--card-02-bg);
   }
   
   .single__card:nth-child(2) {
-    background: var(--card-02-bg);
+    background: var(--card-01-bg);
   }
   
   .single__card:nth-child(3) {
@@ -48,8 +48,8 @@
   
   .dashboard__cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 6rem;
   }
   
   .statics {

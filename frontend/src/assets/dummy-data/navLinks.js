@@ -1,23 +1,23 @@
 const navLinks = [
   {
-    path: "/dashboard",
+    path: "/dash",
     icon: "ri-apps-2-line",
     display: "Dashboard",
   },
   {
     path: "/bookings",
-    icon: "ri-taxi-line",
+    icon: "ri-calendar-event-line",
     display: "Booking",
   },
-  {
-    path: "/sell-car",
-    icon: "ri-shopping-bag-line",
-    display: "Sell Cars",
-  },
+  // {
+  //   path: "/sell-car",
+  //   icon: "ri-shopping-bag-line",
+  //   display: "Sell Cars",
+  // },
   {
     path: "/profile",
-    icon: "ri-settings-2-line",
-    display: "Settings",
+    icon: "ri-user-line",
+    display: "Profile",
   },
 ];
 

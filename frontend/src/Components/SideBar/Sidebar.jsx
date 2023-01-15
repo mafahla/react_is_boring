@@ -38,8 +38,10 @@ const Sidebar = () => {
 
         <div className="sidebar__bottom">
           <span>
+          <a href="/signin">
             <i class="ri-logout-circle-r-line"></i> Logout
-          </span>
+          </a>
+            </span>
         </div>
       </div>
     </div>

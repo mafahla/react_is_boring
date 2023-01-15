@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import './signup.css';
 
 export default class SignUp extends Component {
+
+    
     render() {
         return (
 
@@ -25,7 +27,7 @@ export default class SignUp extends Component {
                 <input type="password" className="form-control" placeholder="Enter password" />
             </div>
 
-            <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
+            <button type="submit" className="btn ">Register</button>
             <p className="forgot-password text-center">
                 Already registered <a href="/signin">Log in?</a>
             </p>

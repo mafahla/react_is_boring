@@ -15,3 +15,8 @@
     border-radius: 15px;
     transition: all .3s;
   }
+  .btn{
+    background: var(--card-02-bg);
+    margin-left: 100px;
+    width: 10rem;
+  }

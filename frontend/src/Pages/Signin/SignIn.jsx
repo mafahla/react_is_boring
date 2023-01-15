@@ -1,7 +1,11 @@
 import React from 'react'
+import axios from "axios";
+import { useState } from "react";
+import { useHistory } from "react-router";
 import './signin.css';
 
 export default function SignIn() {
+  
   return (
     <div className="outer">
     <div className="inner">
@@ -23,7 +27,9 @@ export default function SignIn() {
         Forgot <a href="#">password?</a>
     </p>
 
-    <button type="submit" className="btn btn-dark btn-lg btn-block">Login</button>
+    <button type="submit" className="btn ">
+    <a href='/dash'> Login </a>
+    </button>
     <div className="mt-3">
      <p className="mb-0  text-center">
         Don't have an account?{" "}
