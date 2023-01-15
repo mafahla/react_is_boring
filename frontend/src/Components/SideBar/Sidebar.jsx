@@ -1,14 +1,17 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import navLinks from "../../assets/dummy-data/navLinks";
 import "./sidebar.css";
 
 const Sidebar = () => {
-//   logout() {
-//     localStorage.clear();
-//     window.location.href = '/';
-// }
+  const navigate = useNavigate();
+
+  function logout() {
+    localStorage.clear();
+    navigate('/signin');
+    // window.location.href = '/signin';
+}
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -42,8 +45,8 @@ const Sidebar = () => {
 
         <div className="sidebar__bottom">
           <span>
-          <a href="/signin">
-            <i className="ri-logout-circle-r-line"></i> Logout
+          <a >
+            <i className="ri-logout-circle-r-line" onClick={logout}></i> Logout
           </a>
             </span>
         </div>
