@@ -40,17 +40,17 @@ export default function SignIn(props) {
     <h3>Log in</h3>
 
     <div className="form-group mt-3">
-        <label>Email</label>
+    <label className="lable">Email</label>
         <input type="email" 
         className="form-control" 
-        placeholder="Enter email" 
+        placeholder="Enter email/username" 
         onChange={(e) => setEmail(e.target.value)}
         name="Email"/>
         {errors.email && <p className="error">{errors.email}</p>}
     </div>
 
     <div className="form-group mt-3">
-        <label>Password</label>
+    <label className="lable">Password</label>
         <input type="password" 
         className="form-control" 
         placeholder="Enter password" 
