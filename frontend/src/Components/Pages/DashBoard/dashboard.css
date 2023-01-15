@@ -12,7 +12,7 @@
     right: 0;
     width: 80vw;
     height: 10vh;
-    background: red;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,20 +40,25 @@
     justify-content: center;
     
 }
-.container .header .nav .search input[type=text]{
+.w{
+    background: white;
+}
+.container .header .nav input[type=text]{
     border: none;
-    background: blue;
+    background: whitesmoke;
     padding: 10px;
     width: 50%;
+    border-radius: 10px;
     
 }
 .container .header .nav .search button img{
     width: 30px;
     height: 30px;
+    /* background: white; */
 }
 
 .btn{
-    background: blue;
+    background: gray;
     color: white;
     padding: 5px;
     text-align: center;
@@ -63,6 +68,7 @@
 flex: 1;
 display: flex;
 justify-content: space-between;
+align-items: center;
 
 }
 
@@ -83,6 +89,28 @@ height: 40px;
     top: 0;
     left: 0;
     width: 100%;
+}
+
+
+.container .content{
+    position:relative;
+    margin-top: 0;
+    min-height: 90vh;
+}
+.container .content .cards{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .card{
+    width: 250px;
+    height: 150px;
+    background: white;
+    margin: 20px 10px;
+
 }
 
 

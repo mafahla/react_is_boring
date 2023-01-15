@@ -1,7 +1,14 @@
 import React from 'react'
 import Sidebar from '../../SideBar/Sidebar'
 import './dashboard.css'
-
+import {
+    CDBSidebar,
+    CDBSidebarContent,
+    CDBSidebarFooter,
+    CDBSidebarHeader,
+    CDBSidebarMenu,
+    CDBSidebarMenuItem,
+  } from 'cdbreact';
 
 function Dashboard() {
   return (
@@ -13,14 +20,28 @@ function Dashboard() {
                 <div className="search">
                     <input type="text" placeholder='search...' />
 
-                    <button type='submit'>
-                        <img src='https://imgs.search.brave.com/bosXnONXx_7QFhZf-oQs3hzRGuZKBK-BwabMPvXCAfs/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL3NlYXJjaC1i/dXR0b24tcG5nLXNl/YXJjaC1pY29uLXRo/aXMtaWNvbi1pcy1z/dXBwb3NlZC10by1y/ZXByZXNlbnQtYS1t/YWduaWZ5aW5nLWds/YXNzLWl0LXMtYS1s/YXJnZS1wbmctNTAt/cHgtMTYwMC5wbmc'></img>
+                    <button className='w' type='submit'>
+                    <CDBSidebarMenuItem icon="search"></CDBSidebarMenuItem>
+                        {/* <img src='https://imgs.search.brave.com/Mvf1m1shXlqNr56Ctk5qbv6D5luqvCuBkXAD4or-pTY/rs:fit:980:981:1/g:ce/aHR0cHM6Ly9jZG4u/b25saW5ld2ViZm9u/dHMuY29tL3N2Zy9p/bWdfMjY4NDIxLnBu/Zw'></img> */}
                     </button>
                 </div>
                 <div className="user">
                     <a href="#" className='btn'>Add New</a>
                     <div className="img-case">
                         <img src='https://imgs.search.brave.com/9ZnNxjGl6-JREVThtBLenptIJzTMEpQjWflC2QcIoIg/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC51/dUxUZkVNWEZBcEFp/dTltY1RSaGhnSGFI/YSZwaWQ9QXBp'></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="content">
+            <div className="cards">
+                <div className="card">
+                    <div className="box">
+                        <h1>2342</h1>
+                        <p>Maids</p>
+                    </div>
+                    <div className="icon-case">
+                        <img src="https://imgs.search.brave.com/mAvEXrMjqdrUgoKA5YVTDz5te-IWYmkd7AQiB6Pj_AI/rs:fit:512:512:1/g:ce/aHR0cHM6Ly93d3cu/c3ZncmVwby5jb20v/c2hvdy8xNTYwOS9t/YWlkcy5zdmc.svg" alt="" />
                     </div>
                 </div>
             </div>
